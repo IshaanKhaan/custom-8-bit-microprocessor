@@ -66,6 +66,8 @@ Designed and simulated in **Xilinx Vivado**:
 
 The testbench prints a per-cycle trace (FSM state, program counter, opcode, ALU output, and all register values) to the Tcl console, and dumps `cpu_debug.vcd` for waveform viewing in the Vivado waveform viewer.
 
+The design was also synthesized and verified on a **Digilent Nexys A7 FPGA**, confirming correct behavior beyond simulation.
+
 ## Verified Behavior
 
 Simulation confirms the datapath executes all 5 instructions correctly across the FETCH-DECODE-EXEC-WRITEBACK cycle, with register values updating as expected at each step (e.g. `R0: 0xAA → 0x10 → 0x15` after MOV and ADD).
