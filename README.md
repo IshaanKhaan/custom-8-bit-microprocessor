@@ -70,6 +70,14 @@ The testbench prints a per-cycle trace (FSM state, program counter, opcode, ALU 
 
 Simulation confirms the datapath executes all 5 instructions correctly across the FETCH-DECODE-EXEC-WRITEBACK cycle, with register values updating as expected at each step (e.g. `R0: 0xAA → 0x10 → 0x15` after MOV and ADD).
 
+### Simulation Waveform
+
+![Simulation waveform](simulation_waveform.png)
+
+### Elaborated Schematic
+
+![Schematic](schematic.png)
+
 > Note: the demo program has no HALT instruction — once PC advances past the last defined instruction, the processor falls through to a default no-op and continues incrementing PC, which is expected behavior for this scope.
 
 ## Author
