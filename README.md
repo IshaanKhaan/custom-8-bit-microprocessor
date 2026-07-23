@@ -58,14 +58,13 @@ WRITEBACK → result written back to register file
 
 ## Running the Simulation
 
-Using [Icarus Verilog](http://iverilog.icarus.com/):
+Designed and simulated in **Xilinx Vivado**:
 
-```bash
-iverilog -o sim processor.v testbench.v
-vvp sim
-```
+1. Create a new Vivado project and add `processor.v` as a design source and `testbench.v` as a simulation source
+2. Set `tb_debug` as the top module for simulation
+3. Run **Behavioral Simulation**
 
-This prints a per-cycle trace of the FSM state, program counter, opcode, and register file contents, and generates `cpu_debug.vcd` for waveform viewing (e.g. in GTKWave or Vivado).
+The testbench prints a per-cycle trace (FSM state, program counter, opcode, ALU output, and all register values) to the Tcl console, and dumps `cpu_debug.vcd` for waveform viewing in the Vivado waveform viewer.
 
 ## Verified Behavior
 
